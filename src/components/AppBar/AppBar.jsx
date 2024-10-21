@@ -1,11 +1,7 @@
-import css from "./AppBar.module.css";
-
+import Navigation from "../Navigation/Navigation";
 
 export default function AppBar() {
-  return (
-    <header >
-        <p>Travel<span>Trucks</span></p>
-   <AuthNav />
-  </header>
-  );
+    <header>
+              <Navigation />
+    </header>
 }

@@ -1,11 +1,11 @@
-import { AuthNav } from "../AuthNav/AuthNav";
-const Layout = ({ children }) => {
-  return (
-    <div>
-      <AuthNav />
-      {children}
-    </div>
-  );
-};
+import AppBar from "../AppBar/AppBar";
 
-export default Layout;
+export default function Layout({ children }) {
+    return (
+      <div className={css.container}>
+        <AppBar />
+        {children}
+      </div>
+    );
+  }
+  
