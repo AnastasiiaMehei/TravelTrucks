@@ -1,0 +1,27 @@
+.form {
+    width: 360px;
+height: 88px;
+}
+.inputbox {
+    display: flex;
+    flex-direction: column;
+}
+.input{
+    display: flex;
+
+flex-direction: row;}
+label {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #6c717b;}
+.field {
+    margin-top: 8px;
+    border: none;
+    border-radius: 12px;
+padding: 18px 285px 18px 18px;
+width: 360px;
+height: 56px;
+background: #f7f7f7;
+}
