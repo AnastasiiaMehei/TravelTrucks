@@ -15,6 +15,8 @@ return(
     </div>
     <div className={css.camper}>
         <CamperPage/>
+        <button className={css.button} type='button'>Load more</button>
+
     </div>
     </div>
 )
