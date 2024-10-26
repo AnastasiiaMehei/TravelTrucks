@@ -8,7 +8,7 @@ export default function CamperPage(){
             
 <div className={css.divTitle}>
     <h2 className={css.title}>Title</h2>
-    <p className={css.price}>Prise</p>
+    <p className={css.price}>Price</p>
     <button className={css.like} type='button'> <svg width="26" height="24">
                 <use href="./images/symbol-defs.svg#icon-like"></use>
               </svg></button>
