@@ -7,7 +7,7 @@ import CamperPage from '../CamperPage/CamperPage.jsx'
 import css from './CatalogPage.module.css' 
 import CampersList from '../../components/CamperList/CampersList.jsx'
 import { useEffect } from 'react'
-import VehicleEquipment from '../../components/VehicleEquipment/VehicleEquipment.JSX'
+// import VehicleEquipment from '../../components/VehicleEquipment/VehicleEquipment.JSX'
 export default function CatalogPage () {
     const dispatch = useDispatch();
     const campers = useSelector(state => state.campers.items);
@@ -20,7 +20,7 @@ return(
     <div className={css.sidebar}>
     <Location />
      <p className={css.filters}>Filters</p>
-     <VehicleEquipment />
+     {/* <VehicleEquipment /> */}
      <VehicleType />
     </div>
     <div className={css.camper}>
