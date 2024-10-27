@@ -1,13 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux'
+import { useEffect } from 'react'
 import Location from '../../components/Location/Location.jsx'
 import VehicleType from '../../components/VehicleType/VehicleType.jsx'
 import { fetchCampers } from '../../redux/campers/operations.js'
 import CamperPage from '../CamperPage/CamperPage.jsx'
-
-import css from './CatalogPage.module.css' 
 import CampersList from '../../components/CamperList/CampersList.jsx'
-import { useEffect } from 'react'
-// import VehicleEquipment from '../../components/VehicleEquipment/VehicleEquipment.JSX'
+import css from './CatalogPage.module.css' 
+// import VehicleEquipment from '../../components/VehicleEquipment/VehicleEquipment.jsx'
+
 export default function CatalogPage () {
     const dispatch = useDispatch();
     const campers = useSelector(state => state.campers.items);
