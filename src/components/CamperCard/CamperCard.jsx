@@ -8,7 +8,7 @@ import { FaEuroSign } from "react-icons/fa";
 
 
 export  default function CamperCard ({camper}) {
-    const  {name, rating,  price, location, description, gallery, reviews }  = camper;
+    const  {name, price, location, description, gallery, reviews }  = camper;
     const reviewCount = reviews.length;
     const averageRating = reviews.reduce((sum, review) => sum + review.reviewer_rating, 0) / reviewCount || 0;
 
