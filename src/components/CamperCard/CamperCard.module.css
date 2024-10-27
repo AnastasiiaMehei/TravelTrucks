@@ -44,6 +44,11 @@ font-weight: 600;
 font-size: 24px;
 line-height: 1.33333;
 color: #101828;
+display: flex;
+align-items: center;
+}
+.priceHeart {
+    display: flex;
 }
 .like {
     background: transparent;
@@ -52,7 +57,8 @@ color: #101828;
 .reviewsLocation {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 15px;
 }
 .reviews {
     font-family: "Inter", sans-serif;
@@ -60,6 +66,8 @@ color: #101828;
     font-size: 16px;
     line-height: 1.5;
     color: #101828;
+    display: flex;
+    align-items: center;
 }
 .location {
     font-family: "Inter", sans-serif;
@@ -67,13 +75,24 @@ color: #101828;
     font-size: 16px;
     line-height: 1.5;
     color: #101828;
+    display: flex;
+    align-items: center;
 }
+.shortSummaryContainer {
+    margin-bottom: 15px;
+  }
 .shortSummary {
+    display: flex;
+    align-items: center;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     color: #475467;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
 }
 .links {
     border-radius: 100px;
@@ -93,4 +112,19 @@ line-height: 1.5;
 letter-spacing: -0.01em;
 color: #fff;
 border: none;
+}
+/* icons */
+.heart {
+    width:24px;
+    height: 24px;
+    fill: #101828;
+}
+.heartButton {
+    background: none;
+    border: none;
+}
+.star {
+    width: 16px;
+    height: 16px;
+    color: #ffc531;
 }
