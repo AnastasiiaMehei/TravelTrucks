@@ -5,11 +5,12 @@ import { RxStarFilled } from "react-icons/rx";
 import { FaRegMap } from "react-icons/fa";
 import { FaEuroSign } from "react-icons/fa";
 import sprite from '../../images/icons-sprite.svg'
+import { Link } from 'react-router-dom';
 
 
 
 export  default function CamperCard ({camper}) {
-    const  {name, price, location, description, gallery, reviews, transmission, engine, kitchen, AC }  = camper;
+    const  {name, price, location, description, gallery, reviews, transmission, engine, kitchen, AC, id }  = camper;
     const reviewCount = reviews.length;
     const averageRating = reviews.reduce((sum, review) => sum + review.reviewer_rating, 0) / reviewCount || 0;
 
@@ -82,9 +83,9 @@ export  default function CamperCard ({camper}) {
     </div>
 </div>
 
-<button className={css.showMore}  type='button'>
-Show more
-</button>
+<button className={css.showMore} type='button'>
+        <Link to={`/catalog/${id}`}>Show more</Link>
+      </button>
            </div>
 
         </div>

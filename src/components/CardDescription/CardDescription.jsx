@@ -8,6 +8,7 @@ export default function CardDescription ({camper}) {
 
     return(
         <div>
+            <p className={css.hello}>hello</p>
                 <h2 className={css.title}>{name}</h2>
                <div className={css.images}>
                <img src={gallery[0].thumb} alt="Camper's photo" className={css.img} />
