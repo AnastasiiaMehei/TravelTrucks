@@ -9,7 +9,7 @@ import sprite from '../../images/icons-sprite.svg'
 
 
 export  default function CamperCard ({camper}) {
-    const  {name, price, location, description, gallery, reviews }  = camper;
+    const  {name, price, location, description, gallery, reviews, transmission, engine, kitchen, AC }  = camper;
     const reviewCount = reviews.length;
     const averageRating = reviews.reduce((sum, review) => sum + review.reviewer_rating, 0) / reviewCount || 0;
 
@@ -45,32 +45,43 @@ export  default function CamperCard ({camper}) {
         </div>
 <div className={css.additionInformation}>
     <div className={css.cards}>
-<div className={css.contentInfo}>
-<svg className="icon">
+
+{transmission === "automatic" && (
+            <div className={css.contentInfo}>
+              <svg className="icon">
                 <use xlinkHref={`${sprite}#icon-Automatic`} ></use>
               </svg>
               <p className={css.paragraph}>Automatic</p>
-</div>
-<div className={css.contentInfo}>
-<svg className="icon">
+            </div>
+          )}
+          {engine === "petrol" && (
+            <div className={css.contentInfo}>
+              <svg className="icon">
                 <use xlinkHref={`${sprite}#icon-Petrol`} ></use>
               </svg>
               <p className={css.paragraph}>Petrol</p>
-</div>
-<div className={css.contentInfo}>
-<svg className="icon">
+            </div>
+          )}
+
+ {kitchen && (
+            <div className={css.contentInfo}>
+              <svg className="icon">
                 <use xlinkHref={`${sprite}#icon-Kitchen`} ></use>
               </svg>
               <p className={css.paragraph}>Kitchen</p>
-</div>
-<div className={css.contentInfoAc}>
-<svg className="icon">
+            </div>
+          )}
+           {AC && (
+            <div className={css.contentInfoAc}>
+              <svg className="icon">
                 <use xlinkHref={`${sprite}#icon-AC`} ></use>
               </svg>
               <p className={css.paragraph}>AC</p>
-</div>
+            </div>
+          )}
     </div>
 </div>
+
 <button className={css.showMore}  type='button'>
 Show more
 </button>

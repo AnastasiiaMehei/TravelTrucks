@@ -1,3 +1,19 @@
 /* .wrapper {
     margin-bottom: 32px;
 } */
+.loadMoreBtn {
+    background-color: transparent;
+    border: 1px solid #dadde1;
+border-radius: 200px;
+padding: 16px 32px;
+width: 145px;
+height: 56px;
+font-family: "Inter", sans-serif;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: -0.01em;
+color: #101828;
+display: block;
+margin: 0 auto;
+}

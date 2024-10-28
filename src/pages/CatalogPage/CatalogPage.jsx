@@ -5,7 +5,6 @@ import VehicleType from '../../components/VehicleType/VehicleType.jsx'
 import { fetchCampers } from '../../redux/campers/operations.js'
 import CamperPage from '../CamperPage/CamperPage.jsx'
 import CampersList from '../../components/CamperList/CampersList.jsx'
-// import VehicleEquipment from '../../components/VehicleEquipment/VehicleEquipment'
 import css from './CatalogPage.module.css' 
 export default function CatalogPage () {
     const dispatch = useDispatch();
@@ -27,7 +26,6 @@ return(
     <CampersList campers={campers} />
 
         <CamperPage/>
-        <button className={css.button} type='button'>Load more</button>
     </div>
     </div>
 )

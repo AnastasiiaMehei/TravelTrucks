@@ -13,7 +13,7 @@ display: flex;
 .content {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 19px;
     width: 524px;
 height: 320px;
 }
@@ -79,9 +79,7 @@ align-items: center;
     display: flex;
     align-items: center;
 }
-.shortSummaryContainer {
-    margin-bottom: 15px;
-  }
+
 .shortSummary {
     display: flex;
     align-items: center;
