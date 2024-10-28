@@ -5,9 +5,12 @@ import { fetchCampers } from "../../redux/campers/operations";
 // import { selectError, selectIsLoading } from "../../redux/campers/selectors";
 import Layout from "../Layout/Layout";
 import Loader from "../Loader/Loader";
+// import Features from "../Features/Features";
 const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
 const CatalogPage = lazy(() => import("../../pages/CatalogPage/CatalogPage"));
 const CamperPage = lazy(() => import("../../pages/CamperPage/CamperPage"));
+const Features = lazy(() => import("../../components/Features/Features"));
+
 
 export default function App() {
   const dispatch = useDispatch();
@@ -22,7 +25,11 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<CatalogPage />} />
-          <Route path="/catalog/:camperId" element={<CamperPage />} />
+          <Route path="/catalog/:camperId" element={<CamperPage />}>
+            <Route path="features" element={<Features />} />
+            <Route path="reviews" element={<CamperPage />} />
+          </Route>
+
         </Routes>
       </Suspense>
     </Layout>

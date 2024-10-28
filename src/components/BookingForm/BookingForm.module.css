@@ -1,0 +1,62 @@
+.wrapper {
+    border: 1px solid #dadde1;
+    border-radius: 10px;
+    padding: 44px;
+    width: 641px;
+    height: 588px;
+    margin: 44px;
+}
+.title {
+    font-family: "Inter", sans-serif;
+font-weight: 600;
+font-size: 20px;
+line-height: 1.2;
+color: #101828;
+}
+.paragraph {
+    font-family: "Inter", sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+color: #6c717b;
+}
+.button {
+    border-radius: 200px;
+padding: 16px 60px;
+width: 166px;
+height: 56px;background: #e44848;
+border: none;
+}
+.form {
+display: flex;
+
+flex-direction: column;
+gap:14px;
+margin-top: 24px;
+margin-bottom: 24px;
+}
+.input{
+    border-radius: 12px;
+padding: 18px 337px 18px 18px;
+width: 527px;
+height: 60px;
+background: #f7f7f7;
+font-family: "Inter", sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+color: #6c717b;
+border: none;
+}
+.inputComment {
+    border-radius: 10px;
+padding: 18px 308px 76px 18px;
+width: 527px;
+height: 118px;background: #f7f7f7;
+font-family: "Inter", sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+color: #6c717b;
+border: none;
+}

@@ -29,17 +29,17 @@ export default function CardDescription({ camper }) {
     </div>
       <div className={css.images}>
                 <div className={css.imageDiv}>
-                <img src={gallery[2].original} alt="Camper's photo" className={css.img} />
+                <img src={gallery[0].thumb} alt="Camper's photo" className={css.img} />
 
                 </div>
-                {/* <div className={css.imageDiv}>
+                <div className={css.imageDiv}>
                 <img src={gallery[1].thumb} alt="Camper's photo" className={css.img} />
 
                 </div>
 <div className={css.imageDiv}>
 <img src={gallery[2].thumb} alt="Camper's photo" className={css.img} />
 
-</div> */}
+</div>
 
 </div>
       <p className={css.shortSummary}>{description}</p>

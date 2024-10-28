@@ -1,6 +1,6 @@
-.wrapper {
+/* .wrapper {
     margin: 64px;
-}
+} */
 .mainInfo {
     display: flex;
 flex-direction: column;
@@ -29,8 +29,10 @@ align-items: center;
 .images {
     display: flex;
     flex-direction: row;
-    /* width: 1312px;
-height: 312px; */
+    width: 1312px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+/* height: 312px; */
 justify-content: space-around;}
 .imageDiv img {
     border-radius: 10px;
@@ -68,7 +70,7 @@ height: 312px;
     display: flex;
     align-items: center;
 }
-/* .shortSummary {
+.shortSummary {
     display: flex;
     align-items: center;
     font-family: "Inter", sans-serif;
@@ -76,8 +78,5 @@ height: 312px;
     font-size: 16px;
     line-height: 1.5;
     color: #475467;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    max-width: 100%;
-} */
+   width: 1312px;
+}

@@ -1,0 +1,28 @@
+.navLinks {
+    display: flex;
+flex-direction: row;
+justify-content: flex-start;
+margin-top: 25px;
+gap:42px;
+}
+.links {
+    font-family: "Inter", sans-serif;
+font-weight: 600;
+font-size: 20px;
+line-height: 1.2;
+color: #101828;
+}
+.icon {
+    width: 1312px;
+    height: 2px;
+    stroke-width: 1px;
+stroke: #dadde1;
+}
+.container {
+    margin: 64px;
+}
+.addingInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

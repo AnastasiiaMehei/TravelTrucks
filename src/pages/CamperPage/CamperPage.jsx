@@ -1,18 +1,14 @@
-// import { useDispatch, useSelector } from "react-redux";
-// import CampersList from "../../components/CamperList/CampersList";
-// import { useEffect } from "react";
-// import { fetchCampers } from "../../redux/campers/operations";
-
 import { useEffect, useState } from "react";
 import { fetchCamperById } from "../../redux/campers/operations";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-// import CamperDetails from "../../components/CamperDetails/CamperDetails";
+import {  NavLink, useParams } from "react-router-dom";
+import sprite from '../../images/icons-sprite.svg'
 
 import css from './CamperPage.module.css'
 import { selectCamperById } from '../../redux/campers/selectors';
 
 import CardDescription from "../../components/CardDescription/CardDescription";
+import BookingForm from "../../components/BookingForm/BookingForm";
 export default function CamperPage(){
   const { camperId } = useParams();
 
@@ -36,7 +32,20 @@ export default function CamperPage(){
     <div className={css.container}>
       {isDataLoading ? ( <div>Loading...</div>
       ) : (<CardDescription camper={camper} />)}
-
+<svg className={css.icon}>
+                <use xlinkHref={`${sprite}#icon-links-divider`} ></use>
+              </svg>
+              <div className={css.addingInfo}>
+              <div className={css.navLinks}>
+<NavLink to="features" className={css.links}>
+Features
+        </NavLink>
+        <NavLink to="reviews" className={css.links}>
+        Reviews
+        </NavLink>
+</div>
+<BookingForm />
+              </div>
     </div>
   );
 }

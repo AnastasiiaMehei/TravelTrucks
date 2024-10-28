@@ -18,7 +18,6 @@ return(
     <div className={css.sidebar}>
     <Location />
      <p className={css.filters}>Filters</p>
-     {/* <VehicleEquipment /> */}
 
      <VehicleType />
     </div>
