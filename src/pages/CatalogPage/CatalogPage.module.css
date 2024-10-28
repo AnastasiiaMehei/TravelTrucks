@@ -24,8 +24,7 @@ margin-top: 49px;
         display: flex;
         flex-direction: column;
         gap: 32px;
-        align-items: center
-    }
+        align-items: center;    }
     .button {
         background-color: transparent;
         border: 1px solid #dadde1;

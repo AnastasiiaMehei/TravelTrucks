@@ -4,6 +4,7 @@ import { CiHeart } from "react-icons/ci";
 import { RxStarFilled } from "react-icons/rx";
 import { FaRegMap } from "react-icons/fa";
 import { FaEuroSign } from "react-icons/fa";
+import sprite from '../../images/icons-sprite.svg'
 
 
 
@@ -33,7 +34,6 @@ export  default function CamperCard ({camper}) {
     <p className={css.reviews}>
     <RxStarFilled className={css.star} />
 
-    {/* {rating}({}Reviews) */}
     {averageRating.toFixed(1)} ({reviewCount} reviews)
 
     </p>
@@ -43,8 +43,33 @@ export  default function CamperCard ({camper}) {
 <div className={css.shortSummaryContainer}>
           <p className={css.shortSummary}>{description}</p>
         </div>
-<div className={css.links}>
-    <a href=""></a>
+<div className={css.additionInformation}>
+    <div className={css.cards}>
+<div className={css.contentInfo}>
+<svg className="icon">
+                <use xlinkHref={`${sprite}#icon-Automatic`} ></use>
+              </svg>
+              <p className={css.paragraph}>Automatic</p>
+</div>
+<div className={css.contentInfo}>
+<svg className="icon">
+                <use xlinkHref={`${sprite}#icon-Petrol`} ></use>
+              </svg>
+              <p className={css.paragraph}>Petrol</p>
+</div>
+<div className={css.contentInfo}>
+<svg className="icon">
+                <use xlinkHref={`${sprite}#icon-Kitchen`} ></use>
+              </svg>
+              <p className={css.paragraph}>Kitchen</p>
+</div>
+<div className={css.contentInfoAc}>
+<svg className="icon">
+                <use xlinkHref={`${sprite}#icon-AC`} ></use>
+              </svg>
+              <p className={css.paragraph}>AC</p>
+</div>
+    </div>
 </div>
 <button className={css.showMore}  type='button'>
 Show more

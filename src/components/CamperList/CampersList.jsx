@@ -1,4 +1,4 @@
-// import css from "../CampersList/CampersList";
+import css from "./CampersList.module.css";
 
 import CamperCard from "../CamperCard/CamperCard";
 
@@ -7,7 +7,7 @@ export default function CampersList({ campers }) {
         return <div>Loading...</div>;
       }
       return (
-        <div>
+        <div className={css.wrapper}>
       {campers.slice(0, 5).map((camper) => (
         <CamperCard key={camper.id} camper={camper} />
       ))}

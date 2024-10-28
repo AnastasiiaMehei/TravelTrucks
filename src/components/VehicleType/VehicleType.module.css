@@ -1,9 +1,24 @@
 .wrapper {
+    display: flex;
+    flex-direction: column;
+
+}
+.vehicleEquipment {
     width: 360px;
-height: 168px;
+/* height: 200px; */
 display: flex;
-flex-direction: column;
-gap: 24px;
+flex-direction: row;
+flex-wrap: wrap;
+gap: 8px;
+margin-top: 24px;
+margin-bottom: 24px;
+}
+.vehicleType { width: 360px;
+    height: 96px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+
 }
 .title {
     font-family: "Inter", sans-serif;
@@ -11,29 +26,59 @@ font-weight: 600;
 font-size: 20px;
 line-height: 1.2;
 color: #101828;
+margin-bottom: 24px;
 }
-.icons {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 8px;}
-    .icon {
-        border: 1px solid #dadde1;
-border-radius: 10px;
-padding: 16px 32px;
-width: 112px;
-height: 96px;
-    }
-    .button {
-        border-radius: 200px;
-padding: 16px 60px;
-width: 166px;
-height: 56px;background: #e44848;
-font-family: "Inter", sans-serif;
+.divider {
+    stroke-width: 1px;
+stroke: #dadde1;
+width: 360px;
+height: 2px;
+}
+.paragraph {
+    font-family: "Inter", sans-serif;
 font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: -0.01em;
-color: #fff;
-border: none;
-    }
+text-align: center;
+color: #101828;
+}
+.iconDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #dadde1;
+border-radius: 12px;
+width: 112px;
+height: 96px;
+gap: 4px;
+}
+.fully {
+    padding: 10px;
+}
+.icon {
+    fill: #101828;
+    width: 32px;
+    height: 32px;
+}
+.icons {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;  
+}
+.button {
+    
+    border-radius: 200px;
+    padding: 16px 60px;
+    width: 166px;
+    height: 56px;background: #e44848;font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    color: #fff;
+    border: none;
+}

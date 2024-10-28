@@ -5,9 +5,8 @@ import VehicleType from '../../components/VehicleType/VehicleType.jsx'
 import { fetchCampers } from '../../redux/campers/operations.js'
 import CamperPage from '../CamperPage/CamperPage.jsx'
 import CampersList from '../../components/CamperList/CampersList.jsx'
+// import VehicleEquipment from '../../components/VehicleEquipment/VehicleEquipment'
 import css from './CatalogPage.module.css' 
-// import VehicleEquipment from '../../components/VehicleEquipment/VehicleEquipment.jsx'
-
 export default function CatalogPage () {
     const dispatch = useDispatch();
     const campers = useSelector(state => state.campers.items);
@@ -21,6 +20,7 @@ return(
     <Location />
      <p className={css.filters}>Filters</p>
      {/* <VehicleEquipment /> */}
+
      <VehicleType />
     </div>
     <div className={css.camper}>
