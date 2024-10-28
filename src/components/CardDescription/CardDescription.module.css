@@ -1,0 +1,56 @@
+.title {
+    font-family: "Inter", sans-serif;
+font-weight: 600;
+font-size: 24px;
+line-height: 1.33333;
+color: #101828;
+}
+.images {
+    display: flex;
+    flex-direction: row;
+    width: 1312px;
+height: 312px;
+justify-content: space-between;
+}
+.reviewsLocation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 15px;
+}
+.reviews{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #101828;
+    display: flex;
+    align-items: center;
+}
+.star {
+    width: 16px;
+    height: 16px;
+    color: #ffc531;
+}
+.location{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #101828;
+    display: flex;
+    align-items: center;
+}
+/* .shortSummary {
+    display: flex;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #475467;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+} */
