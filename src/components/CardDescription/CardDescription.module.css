@@ -1,6 +1,10 @@
-.hello {
-    color: blue;
+.wrapper {
+    margin: 64px;
 }
+.mainInfo {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;}
 .title {
     font-family: "Inter", sans-serif;
 font-weight: 600;
@@ -8,13 +12,33 @@ font-size: 24px;
 line-height: 1.33333;
 color: #101828;
 }
+.price {
+    font-family: "Inter", sans-serif;
+font-weight: 600;
+font-size: 24px;
+line-height: 1.33333;
+color: #101828;
+display: flex;
+align-items: center;
+}
+/* .img {
+    border-radius: 10px;
+    width: 292px;
+    height: 312px;
+} */
 .images {
     display: flex;
     flex-direction: row;
-    width: 1312px;
+    /* width: 1312px;
+height: 312px; */
+justify-content: space-around;}
+.imageDiv img {
+    border-radius: 10px;
+width: 292px;
 height: 312px;
-justify-content: space-between;
 }
+
+
 .reviewsLocation {
     display: flex;
     flex-direction: row;
