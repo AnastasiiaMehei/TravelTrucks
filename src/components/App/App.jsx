@@ -11,8 +11,10 @@ const CatalogPage = lazy(() => import("../../pages/CatalogPage/CatalogPage"));
 const CamperPage = lazy(() => import("../../pages/CamperPage/CamperPage"));
 const Features = lazy(() => import("../../components/Features/Features"));
 
+const CamperReviews = lazy(() => import("../../components/CamperReviews/CamperReviews"));
 
 export default function App() {
+  
   const dispatch = useDispatch();
   // const isLoading = useSelector(selectIsLoading);
   // const error = useSelector(selectError);
@@ -26,8 +28,8 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<CatalogPage />} />
           <Route path="/catalog/:camperId" element={<CamperPage />}>
-            <Route path="features" element={<Features />} />
-            <Route path="reviews" element={<CamperPage />} />
+          <Route path="features" element={<Features />} />
+          <Route path="reviews" element={<CamperReviews />} />
           </Route>
 
         </Routes>

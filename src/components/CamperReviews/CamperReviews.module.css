@@ -1,0 +1,58 @@
+.wrapper {
+    width: 631px;
+    height: 340px;
+    border: none;
+    background-color: none;
+}
+.review {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 44px;
+    align-items: flex-start;
+    gap: 16px;
+}
+.avatarNameRating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;}
+.avatarDiv {
+    border-radius: 60px;
+width: 60px;
+height: 60px;
+background: #f2f4f7;
+display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.avatarParagraph {
+    font-family: "Inter", sans-serif;
+font-weight: 600;
+font-size: 24px;
+line-height: 1.33333;
+color: #e44848;
+}
+.reviewContent {
+   display: flex;
+   flex-direction: column; 
+}
+.reviewerName {
+    font-family: "Inter", sans-serif;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+color: #101828;
+}
+.comment {
+    font-family: "Inter", sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+color: #475467;
+}
+.iconRating {
+    width: 96px;
+height: 16px;
+display: flex;
+flex-direction: row;
+}

@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import Location from '../../components/Location/Location.jsx'
 import VehicleType from '../../components/VehicleType/VehicleType.jsx'
 import { fetchCampers } from '../../redux/campers/operations.js'
-import CamperPage from '../CamperPage/CamperPage.jsx'
+// import CamperPage from '../CamperPage/CamperPage.jsx'
 import CampersList from '../../components/CamperList/CampersList.jsx'
 import css from './CatalogPage.module.css' 
 export default function CatalogPage () {
@@ -24,7 +24,7 @@ return(
     <div className={css.camper}>
     <CampersList campers={campers} />
 
-        <CamperPage/>
+        {/* <CamperPage/> */}
     </div>
     </div>
 )
