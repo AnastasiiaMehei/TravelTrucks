@@ -82,3 +82,6 @@ gap: 4px;
     color: #fff;
     border: none;
 }
+.button:hover {
+    background: #d84343;
+}

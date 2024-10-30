@@ -2,6 +2,7 @@ import css from "./CampersList.module.css";
 
 import CamperCard from "../CamperCard/CamperCard";
 import { useState } from "react";
+// import CalendarForm from "../Calendar/Calendar";
 
 export default function CampersList({ campers }) {
   const [visibleCampers, setVisibleCampers] = useState(5);
@@ -13,6 +14,7 @@ export default function CampersList({ campers }) {
       }
       return (
         <div className={css.wrapper}>
+          {/* <CalendarForm/> */}
       {campers.slice(0, visibleCampers).map((camper) => (
         <CamperCard key={camper.id} camper={camper} />
       ))}

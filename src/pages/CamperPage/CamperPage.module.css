@@ -1,3 +1,10 @@
+.container {
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .navLinks {
     display: flex;
 flex-direction: row;
@@ -18,9 +25,7 @@ color: #101828;
     stroke-width: 1px;
 stroke: #dadde1;
 }
-.container {
-    margin: 64px;
-}
+
 .addingInfo {
     display: flex;
     flex-direction: column;

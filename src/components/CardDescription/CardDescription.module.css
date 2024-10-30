@@ -1,8 +1,7 @@
-/* .wrapper {
-    margin: 64px;
-} */
+.wrapper {
+}
 .mainInfo {
-    display: flex;
+    display: flex; 
 flex-direction: column;
 align-items: flex-start;}
 .title {

@@ -1,0 +1,49 @@
+.calendarDiv {
+    padding: 10px;
+    fill: #fff;
+    border: 1px solid #475467;
+    border-radius: 10px;
+    width: 276px;
+    height: 284px;
+}
+.div {
+    border: none;
+    border-radius: none;
+    border-color: transparent;
+}
+.monthsDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.icon{
+    fill: #475467;
+}
+.months {
+    color: #101828;}
+    .daysDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+    .days {
+        font-family: "Inter", sans-serif;
+font-weight: 600;
+font-size: 12px;
+line-height: 1.2;
+/* text-align: center; */
+color: #475467;
+
+    }
+    .iconDivider {
+border-top: 1px solid #475467;
+margin-top: 10px;
+
+    }
+
+.react-datepicker__input-container {
+    display: none;
+}

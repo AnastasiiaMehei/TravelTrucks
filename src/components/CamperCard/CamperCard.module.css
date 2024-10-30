@@ -112,6 +112,9 @@ letter-spacing: -0.01em;
 color: #fff;
 border: none;
 }
+.showMore:hover {
+    background: #d84343;
+}
 /* icons */
 .heart {
     width:24px;
