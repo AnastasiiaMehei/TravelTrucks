@@ -3,7 +3,7 @@
 border-radius: 20px;
 padding: 24px;
 width: 888px;
-height: 368px;
+height: 372px;
 background: #fff;
 gap: 24px;
 display: flex;
@@ -13,9 +13,9 @@ display: flex;
 .content {
     display: flex;
     flex-direction: column;
-    gap: 19px;
+    gap: 10px;
     width: 524px;
-height: 320px;
+height: 720px;
 }
 .imageContainer {
     border-radius: 10px;
@@ -153,6 +153,7 @@ background: #f2f4f7;
 mix-blend-mode: multiply;
 display: flex;
 flex-direction: row;
+justify-content: center;
 width: 100px;
 height: 48px;
 
@@ -168,4 +169,10 @@ font-size: 16px;
 line-height: 1.5;
 text-align: center;
 color: #101828;
+}
+
+.refrigerator{
+    width: 9px;
+    height: 9px;
+    color: #475467;
 }
