@@ -12,6 +12,13 @@ const filtersSlice = createSlice({
     setFilterLocation(state, action) {
       state.location = action.payload;
     },
+    setVehicleType(state, action) {
+      state.vehicleType = action.payload;
+    },
+    toggleFeature(state, action) {
+      const feature = action.payload;
+      state.features[feature] = !state.features[feature];
+    },
   },
 });
 
