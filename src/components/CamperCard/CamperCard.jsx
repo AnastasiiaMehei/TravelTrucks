@@ -36,16 +36,22 @@ export default function CamperCard({ camper }) {
 
   return (
     <div className={css.wrapper}>
-      <div className={css.imageContainer}>
+      {/* <div className={css.imageContainer}>
         <img src={gallery[0].thumb} alt="Camper's photo" className={css.img} />
-      </div>
+      </div> */}
+      <div
+                className={css.imageContainer}
+                style={{
+                  backgroundImage: `url(${gallery[0].thumb})`
+                }}
+              ></div>
       <div className={css.content}>
         <div className={css.divTitle}>
           <h2 className={css.title}>{name}</h2>
           <div className={css.priceHeart}>
             <p className={css.price}>
               <FaEuroSign />
-              {price}
+              {price.toFixed(2)}
             </p>
             <button className={css.heartButton} type="button">
               <CiHeart className={css.heart} />
