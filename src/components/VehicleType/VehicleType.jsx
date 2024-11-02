@@ -1,5 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setFilterForm, toggleFeature, setTransmission, setEngine  } from "../../redux/filters/slice";import { selectFilters } from "../../redux/filters/selectors";
+import { fetchCampers } from '../../redux/campers/operations';
+
 import sprite from "../../images/icons-sprite.svg";
 import css from "./VehicleType.module.css";
 export default function VehicleType() {
@@ -26,6 +28,10 @@ export default function VehicleType() {
   // };
   const handleTransmissionChange = (transmission) => {
     dispatch(setTransmission(transmission));
+  };
+  const handleSearch = () => {
+    // Виконуємо запит на бекенд з поточними фільтрами
+    dispatch(fetchCampers(filters));
   };
   return (
     <div className={css.wrapper}>
@@ -150,7 +156,7 @@ export default function VehicleType() {
           </button>
 
                 </div>
-        <button className={css.button} type="button">
+        <button className={css.button} type="button" onClick={handleSearch}>
           Search
         </button>
       </div>
