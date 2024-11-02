@@ -6,6 +6,9 @@ import { setFilterLocation } from '../../redux/filters/operations';
 export default function Location () {
   const dispatch = useDispatch();
 
+  const handleLocationChange = (event) => {
+    dispatch(setFilterLocation(event.target.value));
+  };
  return (
     <div>
     <Formik
@@ -28,6 +31,8 @@ export default function Location () {
           type="text"
           name="location"
           placeholder="City"
+          onChange={handleLocationChange}
+
         />
        </div>
       </div>

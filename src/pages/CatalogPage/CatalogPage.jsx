@@ -1,25 +1,21 @@
-import { useDispatch, useSelector } from 'react-redux'
-import { useEffect } from 'react'
+import {  useDispatch, useSelector } from 'react-redux'
 import Location from '../../components/Location/Location.jsx'
 import VehicleType from '../../components/VehicleType/VehicleType.jsx'
-import { fetchCampers } from '../../redux/campers/operations.js'
-import { selectFilterLocation } from '../../redux/filters/selectors';
+import { selectFilters } from '../../redux/filters/selectors';
 
 // import CamperPage from '../CamperPage/CamperPage.jsx'
 import CampersList from '../../components/CamperList/CampersList.jsx'
 import css from './CatalogPage.module.css' 
+import { useEffect } from 'react';
+import { fetchCampers } from '../../redux/campers/operations.js';
 export default function CatalogPage () {
-    const dispatch = useDispatch();
-    const campers = useSelector(state => state.campers.items);
-    const filterLocation = useSelector(selectFilterLocation);
+  const dispatch = useDispatch();
+  const filters = useSelector(selectFilters);
+  const campers = useSelector(state => state.campers.items);
+  useEffect(() => {
+    dispatch(fetchCampers(filters));
+  }, [dispatch, filters]);
 
-
-    useEffect(() => {
-        dispatch(fetchCampers());
-      }, [dispatch]);
-      const filteredCampers = campers.filter(camper => 
-        filterLocation === '' || camper.location.toLowerCase().includes(filterLocation.toLowerCase())
-      );
 return(
     <div className={css.wrapper}>
     <div className={css.sidebar}>
@@ -29,7 +25,7 @@ return(
      <VehicleType />
     </div>
     <div className={css.camper}>
-    <CampersList campers={filteredCampers} />
+    <CampersList campers={campers} />
 
         {/* <CamperPage/> */}
     </div>
