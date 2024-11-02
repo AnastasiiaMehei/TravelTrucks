@@ -3,7 +3,7 @@
 border-radius: 20px;
 padding: 24px;
 width: 888px;
-height: 372px;
+height: 368px;
 background: #fff;
 gap: 24px;
 display: flex;
@@ -13,13 +13,13 @@ display: flex;
 .content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
     width: 524px;
 height: 720px;
 }
 .imageContainer {
     border-radius: 10px;
-    width: 292px; 
+    width: 292px;
     height: 320px;
     display: flex;
     justify-content: center;

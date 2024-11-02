@@ -101,7 +101,7 @@ export default function CamperCard({ camper }) {
               </div>
             )}
             {TV && (
-              <div className={css.contentInfo}>
+              <div className={css.contentInfoAc}>
                 <svg className="icon">
                   <use xlinkHref={`${sprite}#icon-TV`}></use>
                 </svg>
