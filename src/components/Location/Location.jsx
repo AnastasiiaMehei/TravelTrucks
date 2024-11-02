@@ -31,7 +31,7 @@ export default function Location () {
           type="text"
           name="location"
           placeholder="City"
-          onChange={handleLocationChange}
+                          onChange={handleLocationChange}
 
         />
        </div>

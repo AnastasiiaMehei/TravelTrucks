@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { setFilterForm, toggleFeature } from "../../redux/filters/slice";
-import { selectFilters } from "../../redux/filters/selectors";
+import { setFilterForm, toggleFeature, setTransmission, setEngine  } from "../../redux/filters/slice";import { selectFilters } from "../../redux/filters/selectors";
 import sprite from "../../images/icons-sprite.svg";
 import css from "./VehicleType.module.css";
 export default function VehicleType() {
@@ -15,17 +14,18 @@ export default function VehicleType() {
   const handleFeatureToggle = (feature) => {
     dispatch(toggleFeature(feature));
   };
-  const setEngineFilter = (engine) => {
-    ((prevFilters) => ({
-      ...prevFilters,
-      engine: prevFilters.engine === engine ? '' : engine, 
-    }));
+  
+  const handleEngineChange = (engine) => {
+    dispatch(setEngine(engine));
   };
-  const setTransmissionFilter = (transmission) => {
-    dispatch((prevFilters) => ({
-      ...prevFilters,
-      transmission: prevFilters.transmission === transmission ? '' : transmission, 
-    }));
+  // const setEngineFilter = (engine) => {
+  //   ((prevFilters) => ({
+  //     ...prevFilters,
+  //     engine: prevFilters.engine === engine ? '' : engine, 
+  //   }));
+  // };
+  const handleTransmissionChange = (transmission) => {
+    dispatch(setTransmission(transmission));
   };
   return (
     <div className={css.wrapper}>
@@ -44,8 +44,8 @@ export default function VehicleType() {
             </svg>
             <p className={css.paragraph}>AC</p>
           </button>
-          <button className={`${css.iconDiv} ${filters.features.includes("automatic") ? css.active : ""}`}
-            onClick={() => setTransmissionFilter('automatic')}
+          <button className={`${css.iconDiv} ${filters.transmission === "automatic" ? css.active : ""}`}
+            onClick={() => handleTransmissionChange('automatic')}
 >
             <svg className={css.icon}>
               <use xlinkHref={`${sprite}#icon-Automatic`}></use>
@@ -99,7 +99,7 @@ export default function VehicleType() {
         <div className={css.icons}>
           <button
             onClick={() => handleFormChange("panelTruck")}
-            className={`${css.iconDiv} ${filters.features.includes("panelTruck") ? css.active : ""}`}
+            className={`${css.iconDiv} ${filters.form.includes("panelTruck") ? css.active : ""}`}
           >
             <svg className={css.icon}>
               <use xlinkHref={`${sprite}#icon-Van`}></use>
@@ -107,7 +107,7 @@ export default function VehicleType() {
             <p className={css.paragraph}>Van</p>
           </button>
           <button
-            className={`${css.iconDiv} ${filters.features.includes("fullyIntegrated") ? css.active : ""}`}
+            className={`${css.iconDiv} ${filters.form.includes("fullyIntegrated") ? css.active : ""}`}
             onClick={() => handleFormChange("fullyIntegrated")}
           >
             <svg className={css.icon}>
@@ -116,7 +116,7 @@ export default function VehicleType() {
             <p className={css.paragraph}>Fully Integrated</p>
           </button>
           <button
-            className={`${css.iconDiv} {filters.features.includes("alcove") ? css.active : ""}`}
+            className={`${css.iconDiv} ${filters.form.includes("alcove") ? css.active : ""}`}
             onClick={() => handleFormChange("alcove")}
           >
             <svg className={css.icon}>
@@ -125,10 +125,14 @@ export default function VehicleType() {
             <p className={css.paragraph}>Alcove</p>
           </button>
         </div>
-        <p>Engine type</p>
+        <p className={css.title}>Engine type</p>
+        <svg className={css.divider}>
+          <use xlinkHref={`${sprite}#icon-divider`}></use>
+        </svg>
+        <div className={css.petrolDieselDiv}>
         <button
-            className={`${css.iconDiv} ${filters.features.includes("alcove") ? css.active : ""}`}
-            onClick={() => handleFormChange("alcove")}
+            className={`${css.iconDiv} ${filters.engine.includes("diesel") ? css.active : ""}`}
+            onClick={() => handleEngineChange("diesel")}
           >
             <svg className={css.icon}>
               <use xlinkHref={`${sprite}#icon-Petrol`}></use>
@@ -136,15 +140,16 @@ export default function VehicleType() {
             <p className={css.paragraph}>Diesel</p>
           </button>
           <button
-             className={`${css.iconDiv} ${filters.engine === 'diesel' ? css.active : ''} `}
-            
-             onClick={() => setEngineFilter('diesel')}
+            className={`${css.iconDiv} ${filters.engine.includes("petrol") ? css.active : ""}`}
+            onClick={() => handleEngineChange("petrol")}
           >
             <svg className={css.icon}>
               <use xlinkHref={`${sprite}#icon-Petrol`}></use>
             </svg>
             <p className={css.paragraph}>Petrol</p>
           </button>
+
+                </div>
         <button className={css.button} type="button">
           Search
         </button>

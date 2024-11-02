@@ -89,3 +89,11 @@ gap: 4px;
 .button:hover {
     background: #d84343;
 }
+
+.petrolDieselDiv {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
