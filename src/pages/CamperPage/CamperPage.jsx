@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectCamperById } from "../../redux/campers/selectors";
 import CardDescription from "../../components/CardDescription/CardDescription";
 import Features from "../../components/Features/Features";
-import CamperReviews from "../../components/CamperReviews/CamperReviews.JSX";
+import CamperReviews from "../../components/CamperReviews/CamperReviews.jsx";
 import BookingForm from "../../components/BookingForm/BookingForm";
 import css from './CamperPage.module.css'
 export default function CamperPage() {

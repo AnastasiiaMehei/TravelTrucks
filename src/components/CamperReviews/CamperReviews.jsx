@@ -1,5 +1,3 @@
-// import sprite from '../../images/icons-sprite.svg'
-
 import css from './CamperReviews.module.css'
 export default function CamperReviews({camper}){
     if (!camper || !camper.reviews || camper.reviews.length === 0) {
