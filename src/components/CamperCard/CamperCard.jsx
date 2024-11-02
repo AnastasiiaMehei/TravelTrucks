@@ -48,7 +48,6 @@ export default function CamperCard({ camper }) {
               {price}
             </p>
             <button className={css.heartButton} type="button">
-              {" "}
               <CiHeart className={css.heart} />
             </button>
           </div>

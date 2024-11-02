@@ -9,48 +9,48 @@ export default function VehicleType() {
                 <use xlinkHref={`${sprite}#icon-divider`} ></use>
               </svg>
             <div className={css.vehicleEquipment}>
-           <div className={css.iconDiv}>
+           <button className={css.iconDiv}>
            <svg className={css.icon}>
                 <use xlinkHref={`${sprite}#icon-AC`} ></use>
               </svg>
               <p className={css.paragraph}>AC</p>
-           </div>
-           <div className={css.iconDiv}>
+           </button>
+           <button className={css.iconDiv}>
            <svg className={css.icon}>
                 <use xlinkHref={`${sprite}#icon-Automatic`} ></use>
               </svg>
               <p className={css.paragraph}>Automatic</p>
-           </div>
-           <div className={css.iconDiv}>
+           </button>
+           <button className={css.iconDiv}>
            <svg className={css.icon}>
                 <use xlinkHref={`${sprite}#icon-Kitchen`} ></use>
               </svg>
               <p className={css.paragraph}>Kitchen</p>
-           </div>
-           <div className={css.iconDiv}>
+           </button>
+           <button className={css.iconDiv}>
            <svg className={css.icon}>
                 <use xlinkHref={`${sprite}#icon-Bathroom`} ></use>
               </svg>
               <p className={css.paragraph}>Bathroom</p>
-           </div> 
-           <div className={css.iconDiv}>
+           </button> 
+           <button className={css.iconDiv}>
            <svg className={css.icon}>
                 <use xlinkHref={`${sprite}#icon-TV`} ></use>
               </svg>
               <p className={css.paragraph}>TV</p>
-           </div>
-           <div className={css.iconDiv}>
+           </button>
+           <button className={css.iconDiv}>
            <svg className={css.icon}>
                 <use xlinkHref={`${sprite}#icon-Radio`} ></use>
               </svg>
               <p className={css.paragraph}>Radio</p>
-           </div>
-           <div className={css.iconDiv}>
+           </button>
+           <button className={css.iconDiv}>
            <svg className={css.icon}>
                 <use xlinkHref={`${sprite}#icon-Kitchen`} ></use>
               </svg>
               <p className={css.paragraph}>Kitchen</p>
-           </div>
+           </button>
           
             </div>
         </div>
@@ -60,24 +60,24 @@ export default function VehicleType() {
                 <use xlinkHref={`${sprite}#icon-divider`} ></use>
               </svg>
             <div className={css.icons}>
-            <div className={css.iconDiv} >
+            <button className={css.iconDiv} >
            <svg className={css.icon}>
                 <use xlinkHref={`${sprite}#icon-Van`} ></use>
               </svg>
               <p className={css.paragraph}>Van</p>
-           </div>
-           <div className={`${css.iconDiv} ${css.fully}`}>
+           </button>
+           <button className={`${css.iconDiv} ${css.fully}`}>
            <svg className={css.icon}>
                 <use xlinkHref={`${sprite}#icon-Fully-Integrated`} ></use>
               </svg>
               <p className={css.paragraph} >Fully Integrated</p>
-           </div>
-           <div className={css.iconDiv}>
+           </button>
+           <button className={css.iconDiv}>
            <svg className={css.icon}>
                 <use xlinkHref={`${sprite}#icon-Alcove`} ></use>
               </svg>
               <p className={css.paragraph}>Alcove</p>
-           </div>
+           </button>
             </div>
             <button className={css.button} type='button'>Search</button>
         </div>

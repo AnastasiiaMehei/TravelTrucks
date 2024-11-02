@@ -54,6 +54,10 @@ width: 112px;
 height: 96px;
 gap: 4px;
 }
+.active {
+    border: 1px solid #e44848;
+
+}
 .fully {
     padding: 10px;
 }
