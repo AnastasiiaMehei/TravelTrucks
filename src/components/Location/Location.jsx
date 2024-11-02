@@ -1,7 +1,7 @@
 import { Formik, Form, Field } from "formik";
 import css from './Location.module.css'
 import { useDispatch } from "react-redux";
-import { setFilterLocation } from '../../redux/filters/operations';
+import { setFilterLocation  } from "../../redux/filters/slice";
 
 export default function Location () {
   const dispatch = useDispatch();
@@ -9,6 +9,7 @@ export default function Location () {
   const handleLocationChange = (event) => {
     dispatch(setFilterLocation(event.target.value));
   };
+
  return (
     <div>
     <Formik
@@ -21,7 +22,7 @@ export default function Location () {
     }}  >
     <Form className={css.form} autoComplete="off">
       <div className={css.inputbox}>
-      <label>Location</label>
+      <label >Location</label>
        <div className={css.input} >
        <svg>
     <use href='../../images/symbol-defs.svg#icon-Location'></use>
@@ -31,7 +32,7 @@ export default function Location () {
           type="text"
           name="location"
           placeholder="City"
-                          onChange={handleLocationChange}
+          onSubmit={handleLocationChange}
 
         />
        </div>
