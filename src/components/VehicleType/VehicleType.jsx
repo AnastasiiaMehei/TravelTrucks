@@ -156,9 +156,9 @@ export default function VehicleType() {
           </button>
 
                 </div>
-        <button className={css.button} type="button" onClick={handleSearch}>
+        {/* <button className={css.button} type="button" onClick={handleSearch}>
           Search
-        </button>
+        </button> */}
       </div>
     </div>
   );
