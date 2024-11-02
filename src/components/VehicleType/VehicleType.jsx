@@ -16,13 +16,13 @@ export default function VehicleType() {
     dispatch(toggleFeature(feature));
   };
   const setEngineFilter = (engine) => {
-    setFilters((prevFilters) => ({
+    ((prevFilters) => ({
       ...prevFilters,
       engine: prevFilters.engine === engine ? '' : engine, 
     }));
   };
   const setTransmissionFilter = (transmission) => {
-    setFilters((prevFilters) => ({
+    dispatch((prevFilters) => ({
       ...prevFilters,
       transmission: prevFilters.transmission === transmission ? '' : transmission, 
     }));
@@ -36,7 +36,7 @@ export default function VehicleType() {
         </svg>
         <div className={css.vehicleEquipment}>
           <button
-            className={filters.features.includes("AC") ? css.active : ""}
+            className={`${css.iconDiv} ${filters.features.includes("AC") ? css.active : ""}`}
             onClick={() => handleFeatureToggle("AC")}
           >
             <svg className={css.icon}>
@@ -44,7 +44,7 @@ export default function VehicleType() {
             </svg>
             <p className={css.paragraph}>AC</p>
           </button>
-          <button className={filters.features.includes("automatic") ? css.active : ""}
+          <button className={`${css.iconDiv} ${filters.features.includes("automatic") ? css.active : ""}`}
             onClick={() => setTransmissionFilter('automatic')}
 >
             <svg className={css.icon}>
@@ -53,7 +53,7 @@ export default function VehicleType() {
             <p className={css.paragraph}>Automatic</p>
           </button>
           <button
-            className={filters.features.includes("kitchen") ? css.active : ""}
+            className={`${css.iconDiv} ${filters.features.includes("kitchen") ? css.active : ""}`}
             onClick={() => handleFeatureToggle("kitchen")}
           >
             <svg className={css.icon}>
@@ -61,21 +61,21 @@ export default function VehicleType() {
             </svg>
             <p className={css.paragraph}>Kitchen</p>
           </button>
-          <button className={filters.features.includes("bathroom") ? css.active : ""}
+          <button className={`${css.iconDiv} ${filters.features.includes("bathroom") ? css.active : ""}`}
             onClick={() => handleFeatureToggle("bathroom")}>
             <svg className={css.icon}>
               <use xlinkHref={`${sprite}#icon-Bathroom`}></use>
             </svg>
             <p className={css.paragraph}>Bathroom</p>
           </button>
-          <button className={filters.features.includes("TV") ? css.active : ""}
+          <button className={`${css.iconDiv} ${filters.features.includes("TV") ? css.active : ""}`}
             onClick={() => handleFeatureToggle("TV")}>
             <svg className={css.icon}>
               <use xlinkHref={`${sprite}#icon-TV`}></use>
             </svg>
             <p className={css.paragraph}>TV</p>
           </button>
-          <button className={filters.features.includes("radio") ? css.active : ""}
+          <button className={`${css.iconDiv} ${filters.features.includes("radio") ? css.active : ""}`}
             onClick={() => handleFeatureToggle("radio")}>
             <svg className={css.icon}>
               <use xlinkHref={`${sprite}#icon-Radio`}></use>
@@ -99,7 +99,7 @@ export default function VehicleType() {
         <div className={css.icons}>
           <button
             onClick={() => handleFormChange("panelTruck")}
-            className={filters.features.includes("panelTruck") ? css.active : ""}
+            className={`${css.iconDiv} ${filters.features.includes("panelTruck") ? css.active : ""}`}
           >
             <svg className={css.icon}>
               <use xlinkHref={`${sprite}#icon-Van`}></use>
@@ -107,7 +107,7 @@ export default function VehicleType() {
             <p className={css.paragraph}>Van</p>
           </button>
           <button
-            className={filters.features.includes("fullyIntegrated") ? css.active : ""}
+            className={`${css.iconDiv} ${filters.features.includes("fullyIntegrated") ? css.active : ""}`}
             onClick={() => handleFormChange("fullyIntegrated")}
           >
             <svg className={css.icon}>
@@ -116,7 +116,7 @@ export default function VehicleType() {
             <p className={css.paragraph}>Fully Integrated</p>
           </button>
           <button
-            className={filters.features.includes("alcove") ? css.active : ""}
+            className={`${css.iconDiv} {filters.features.includes("alcove") ? css.active : ""}`}
             onClick={() => handleFormChange("alcove")}
           >
             <svg className={css.icon}>
@@ -127,7 +127,7 @@ export default function VehicleType() {
         </div>
         <p>Engine type</p>
         <button
-            className={filters.features.includes("alcove") ? css.active : ""}
+            className={`${css.iconDiv} ${filters.features.includes("alcove") ? css.active : ""}`}
             onClick={() => handleFormChange("alcove")}
           >
             <svg className={css.icon}>
@@ -136,7 +136,7 @@ export default function VehicleType() {
             <p className={css.paragraph}>Diesel</p>
           </button>
           <button
-             className={`${filters.engine === 'diesel' ? css.active : ''} ${css.filterButton}`}
+             className={`${css.iconDiv} ${filters.engine === 'diesel' ? css.active : ''} `}
             
              onClick={() => setEngineFilter('diesel')}
           >
